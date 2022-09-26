@@ -11,7 +11,7 @@ public class Usuario {
 
   }
   
-  public Usuario(String username, String password, Integer role, Date fecha_expiracion) {
+  public Usuario(String username, String password,Rol role, Date fecha_expiracion) {
     this.setFecha_expiracion(fecha_expiracion);
     this.setPassword(password);
     this.setRole(role);
@@ -25,14 +25,19 @@ public class Usuario {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Integer id;
-  @Column(name = "nombreUsuario",length = 20,nullable = false,unique = true)
+  @Column(name = "usuario",length = 20,nullable = false,unique = true)
   private String username;
   @Column(name = "contrasena",length = 20,nullable = false,unique = true)
   private String password;
-  @Column(name = "rol",nullable = false,unique = false)
-  private Integer role;
-  @Column(name = "expDate",nullable = true,unique = false)
-  private Date fecha_expiracion;
+ // @Column(name = "id_role",nullable = false,unique = false)
+  //private Integer idrole;
+  @Column(name = "expirationa_date",nullable = true,unique = false)
+  private Date fecha_expiracion; 
+  
+  
+  @OneToOne
+  @JoinColumn(name = "id_role", referencedColumnName = "id",nullable = false)
+  private Rol role;
 
 
 
@@ -60,11 +65,11 @@ public class Usuario {
     this.password = password;
   }
 
-  public Integer getRole() {
-    return role;
+  public Rol getRole() {
+    return this.role;
   }
 
-  public void setRole(Integer role) {
+  public void setRole(Rol role) {
     this.role = role;
   }
 
@@ -77,7 +82,7 @@ public class Usuario {
   } 
   @Override
   public String toString() {
-    return "Usuario [fecha_expiracion=" + fecha_expiracion + ", id=" + id + ", role=" + role + ", username=" + username
+    return "Usuario [fecha_expiracion=" + fecha_expiracion + ", id=" + id + ", role=" + this.role.getId() + ", username=" + username
         + "]";
   }
 

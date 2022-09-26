@@ -28,17 +28,10 @@ public class Rol {
   @Column(length = 50, name = "description", nullable = true, unique = false )
   private String descripcion;
 
-  //Relación de Muchos a uno
-  // @OneToMany(mappedBy = "user",cascade= CascadeType.ALL)
-  // private List<Usuario> usuarios;
 
-  // public boolean addOrder(Order order){
-  //   if(orders == null)
-  //   orders = new ArrayList<>();
-  //   return this.orders.add(order);
-
-  // }
-  //Get and Setter
+  @OneToOne(mappedBy ="role" )
+  private Usuario usuario;
+  
   public Integer getId() {
     return id;
   }
