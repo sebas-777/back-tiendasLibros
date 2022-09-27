@@ -121,23 +121,7 @@ public class UsuarioTest {
 		// find all by role
 		List<Usuario> usr = usrRepo.findAllByRole(rolecreated);
 		assertTrue(usr.size() >0);
-		//Search User
-		//Usuario usrSearched;
-		//Optional<Usuario> usrSearchedOptional = usrRepo.findById(created.getId());
-		//assertTrue(usrSearchedOptional.isPresent());
-		//usrSearched = usrSearchedOptional.get();
-		//Update User
-		//usrSearched.setPassword(newPassword);
-		//usrSearched.setUsername(newUsername);
-		//Usuario usrUpdated = usrRepo.save(usrSearched);
-		//Test changes
-		//assertNotNull(usrUpdated.getId());
-		//assertTrue(usrUpdated.getId() > 0);
-		//assertEquals(newPassword, usrUpdated.getPassword());
-		//assertEquals(newUsername, usrUpdated.getUsername());
-		//Log
-		//System.out.println(rolecreated.toString());
-		//System.out.println(usrUpdated.toString());
+		
 		
 	}
 	
