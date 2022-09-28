@@ -1,5 +1,8 @@
 package com.example.demo.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.*;
 
 
@@ -23,6 +26,20 @@ public class Categoria{
   private String nombre;
   @Column(length = 50, name = "description", nullable = true, unique = false)
   private String descripcion;
+  
+  @ManyToMany(fetch = FetchType.LAZY, mappedBy = "categories")
+  private List<Producto> products;
+  
+  public List<Producto> getProducts(){
+	  return products;
+  }
+  
+  public boolean addProduct(Producto product){
+	  if (products == null) {
+		products = new ArrayList<>();
+	} 
+	  return this.products.add(product);
+  }
 
 
   public Integer getId() {

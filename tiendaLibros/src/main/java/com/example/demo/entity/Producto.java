@@ -1,5 +1,8 @@
 package com.example.demo.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.*;
 
 
@@ -20,23 +23,22 @@ public class Producto {
     this.setPrecio(precio);
   }
 
-  // @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-  // @JoinTable(name = "products_categories",joinColumns = @JoinColumn(name = "id"),
-  // inverseJoinColumns=@JoinColumn(name="id"))
-  // private List<Categoria>categories;
+  	@ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+  	@JoinTable(name = "product_category",
+  		joinColumns = @JoinColumn(name = "product_id"),
+  		inverseJoinColumns=@JoinColumn(name="category_id")
+  	)
+  	private List<Categoria>categories;
+  	
+  	public List<Categoria> getCategories(){
+  		return categories;
+  	}
 
-  // public Producto(List<Categoria> categories, String nombre, String marca, Float precio) {
-  //   this.categories = categories;
-  //   this.nombre = nombre;
-  //   this.marca = marca;
-  //   this.precio = precio;
-  // }
-
-  // public boolean addCategory(Categoria category){
-  //   if(categories == null)
-  //     categories = new ArrayList<>();
-  //   return this.categories.add(category);
-  // }
+  	public boolean addCategory(Categoria category){
+     if(categories == null)
+       categories = new ArrayList<>();
+     return this.categories.add(category);
+   }
 
   //Atributos
   @Id
