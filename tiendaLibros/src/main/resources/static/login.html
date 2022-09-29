@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro - Compra de Libros</title>
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.png" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <!--===============================================================================================-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="fonts/iconic/css/material-design-iconic-font.min.css"
+    />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/linearicons-v1.0.0/icon-font.min.css" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/MagnificPopup/magnific-popup.css" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="css/access.css" />
+  </head>
+  <body>
+    <div class="container__access">
+      <div class="signin-signup">
+        <form id="signup" id="form-register"  class="signup container">
+          <h3 class="mtext-105 cl2 txt-center p-b-30">Sign up</h3>
+          <div class="bor8 m-b-20 how-pos4-parent">
+            <input
+              type="text"
+              class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30"
+              id="input-username"
+              placeholder="Nombre de Usuario"
+            />
+            <img
+              class="how-pos4 pointer-none"
+              src="images/icons/icon-email.png"
+              alt="icon-email-signup"
+            />
+          </div>
+          <div>
+            <div class="bor8 m-b-20 how-pos4-parent">
+              <input
+                class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30"
+                type="password"
+                id="input-contrasena"
+                placeholder="Contraseña"
+                required
+              />
+              <img
+                class="how-pos4 pointer-none"
+                src="images/icons/icon-password.png"
+                alt="icon-password-signup"
+              />
+            </div>
+            <div class="bor8 m-b-20 how-pos4-parent">
+              <input
+                class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30"
+                type="password"
+                id="input-contrasena-repeat"
+                placeholder="Repetir Contraseña"
+                required
+              />
+              <img
+                class="how-pos4 pointer-none"
+                src="images/icons/icon-password.png"
+                alt="icon-password-signup-record"
+              />
+            </div>
+          </div>
+          <!-- Nombre -->
+          <div class="bor8 m-b-20 how-pos4-parent">
+            <input
+              type="text"
+              class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30"
+              id="input-nombre"
+              placeholder="Nombre" 
+              required
+            />
+            <img
+              class="how-pos4 pointer-none"
+              src="images/icons/icon-email.png"
+              alt="icon-email-signup"
+            />
+          </div>
+          <!-- Apellido -->
+          <div class="bor8 m-b-20 how-pos4-parent">
+            <input
+              type="text"
+              class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30"
+              id="input-apellidos"
+              placeholder="Apellidos" 
+              required
+            />
+            <img
+              class="how-pos4 pointer-none"
+              src="images/icons/icon-email.png"
+              alt="icon-email-signup"
+            />
+          </div>
+          <!-- Email -->
+          <div class="bor8 m-b-20 how-pos4-parent">
+            <input
+              type="text"
+              class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30"
+              id="input-email" 
+              placeholder="Email"
+              required
+            />
+            <img
+              class="how-pos4 pointer-none"
+              src="images/icons/icon-email.png"
+              alt="icon-email-signup"
+            />
+          </div>
+          <!-- Saldo -->
+          <div class="bor8 m-b-20 how-pos4-parent">
+            <input
+              type="number"
+              class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30"
+              id="input-saldo" 
+              placeholder="0" 
+              min="0" max="10000" value="0" 
+              required 
+            />
+            <img
+              class="how-pos4 pointer-none"
+              src="images/icons/icon-email.png"
+              alt="icon-email-signup"
+            />
+          </div>
+          <!-- Input premium -->
+          <div class="bor8 m-b-20 how-pos4-parent">
+            <input
+              type="Checkbox"
+              class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30"
+              id="input-premium"
+            />
+            <img
+              class="how-pos4 pointer-none"
+              src="images/icons/icon-email.png"
+              alt="icon-email-signup"
+            />
+          </div>
+
+          <button
+            class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail"
+            type="submit"
+            id="register-btn"
+            value="Registrar usuario"
+          >
+            register
+          </button>
+        </form>
+        <div id="register-error" class="alert alert-danger d-none" role="alert"></div>
+
+        <form id="signin" id="form-login" class="signin">
+          <h3 class="mtext-105 cl2 txt-center p-b-30">Sign in</h3>
+          <div class="bor8 m-b-20 how-pos4-parent">
+            <input
+              class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30"
+              type="text"
+              placeholder="Usuario"
+              id="usuario"
+              required
+            />
+            <img class="how-pos4 pointer-none" src="images/icons/icon-email.png" alt="ICON" />
+          </div>
+          <div class="bor8 m-b-20 how-pos4-parent">
+            <input
+              class="stext-111 cl2 plh3 size-116 p-l-62 p-r-30"
+              type="password"
+              placeholder="Contraseña"
+              id="contrasena"
+              required
+            />
+            <img
+              class="how-pos4 pointer-none"
+              src="images/icons/icon-password.png"
+              alt="icon-password-signup-record"
+            />
+          </div>
+          <button
+            class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail"
+            type="submit"
+            id="BTNENTRAR"
+          >
+            Entrar
+          </button>
+        </form>
+        <div id="login-error" class="alert alert-danger d-none" role="alert">Usuario o contraseña incorrectos</div>
+      </div>
+
+      <div class="panel panel-signin">
+        <div>
+          <h1 class="cl0 txt-center">New here?</h1>
+          <p class="cl0 p-b-30 p-t-5">Register and start creating new quizzes</p>
+          <button
+            class="toggle-btn stext-101 cl0 size-100 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer"
+          >
+            sign up
+          </button>
+        </div>
+        <img src="./images/access/signin.svg" alt="signin" />
+      </div>
+
+      <div class="panel panel-signup">
+        <div>
+          <h1 class="cl0 txt-center">You have an account?</h1>
+          <p class="cl0 p-b-30">Login to buy more of our products</p>
+          <button
+            class="toggle-btn stext-101 cl0 size-100 bg3 bor1 hov-btn3 p-lr-15 trans-04 pointer"
+          >
+            sign in
+          </button>
+        </div>
+        <img src="./images/access/signup.svg" alt="signin" />
+      </div>
+    </div>
+
+    <script src="./public/js/access.js"></script>
+  </body>
+</html>

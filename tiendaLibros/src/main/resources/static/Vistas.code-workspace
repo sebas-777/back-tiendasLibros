@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\..\\..\\xampp-2\\htdocs\\TiendaVirtual\\1.Templay\\cozastore"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Vistas"
+	}
+}
