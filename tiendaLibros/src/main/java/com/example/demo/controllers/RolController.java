@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class RolController {  
 	@RequestMapping(value = "/")
 	public String index() {
-		return "categoria";
+		return "roles";
 	}
 
 }
