@@ -13,15 +13,20 @@ public class IndexController {
 		return "index";
 	}
 	
-	@RequestMapping(value = "/login")
-	public String login() {
-		return "login";
-	}
-	
 	@RequestMapping(value = "/nosotros")
-	public String nosostros() {
+	public String nosotros() {
 		return "nosotros";
 	}
+
+	@RequestMapping(value = "/login")
+	public String loginuno() {
+		return "loginuno";
+	}
+	
+	// @RequestMapping(value = "/nosotros")
+	// public String nosostros() {
+	// 	return "nosotros";
+	// }
 	
 	@RequestMapping(value = "/libros")
 	public String libros() {
@@ -41,5 +46,10 @@ public class IndexController {
 	@RequestMapping(value = "/comprar")
 	public String comprar() {
 		return "comprar";
+	}
+
+	@RequestMapping(value = "/categoria")
+	public String categoria() {
+		return "categoria";
 	}
 }
